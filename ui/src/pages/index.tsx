@@ -43,17 +43,17 @@ function Dashboard() {
   }, [data]);
 
   React.useEffect(() => {
-    appBarContext.setTitle('Dashboard');
+    appBarContext.setTitle('控制台');
   }, [appBarContext]);
 
   return (
     <Grid container spacing={3} sx={{ mx: 2, width: '100%' }}>
       {(
         [
-          [SchedulerStatus.Success, 'Successful'],
-          [SchedulerStatus.Error, 'Failed'],
-          [SchedulerStatus.Running, 'Running'],
-          [SchedulerStatus.Cancel, 'Canceled'],
+          [SchedulerStatus.Success, '成功'],
+          [SchedulerStatus.Error, '失败'],
+          [SchedulerStatus.Running, '运行中'],
+          [SchedulerStatus.Cancel, '取消'],
         ] as Array<[SchedulerStatus, string]>
       ).map(([status, label]) => (
         <Grid item xs={12} md={4} lg={3} key={label}>

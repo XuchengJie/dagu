@@ -29,10 +29,10 @@ function Search() {
   return (
     <Grid container sx={{ mx: 4, width: '100%' }}>
       <Grid item xs={12}>
-        <Title>Search</Title>
+        <Title>搜索</Title>
         <Stack spacing={2} direction="row">
           <TextField
-            label="Search Text"
+            label="关键词"
             variant="outlined"
             style={{
               flex: 0.5,
@@ -64,7 +64,7 @@ function Search() {
               onSubmit(searchVal);
             }}
           >
-            Search
+            搜索
           </Button>
         </Stack>
 
@@ -79,7 +79,7 @@ function Search() {
                 return (
                   <Box>
                     <Typography variant="h6" style={{ fontStyle: 'bolder' }}>
-                      {data.Results.length} results found
+                     找到{data.Results.length}个结果
                     </Typography>
                     <SearchResult results={data?.Results} />
                   </Box>
@@ -87,7 +87,7 @@ function Search() {
               }
 
               if ((data && !data.Results) || (data && data.Results && data.Results.length === 0)) {
-                return <Box>No results found</Box>;
+                return <Box>未找到结果</Box>;
               }
 
               return null

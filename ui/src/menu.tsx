@@ -33,13 +33,13 @@ function Icon({ icon }: { icon: IconProp }) {
 export const mainListItems = (
   <React.Fragment>
     <Link to="/dashboard">
-      <ListItem text="Dashboard" icon={<Icon icon={faChartGantt}></Icon>} />
+      <ListItem text="控制台" icon={<Icon icon={faChartGantt}></Icon>} />
     </Link>
     <Link to="/dags">
-      <ListItem text="DAGs" icon={<Icon icon={faTableList}></Icon>} />
+      <ListItem text="任务" icon={<Icon icon={faTableList}></Icon>} />
     </Link>
     <Link to="/search">
-      <ListItem text="Search" icon={<Icon icon={faMagnifyingGlass}></Icon>} />
+      <ListItem text="搜索" icon={<Icon icon={faMagnifyingGlass}></Icon>} />
     </Link>
   </React.Fragment>
 );

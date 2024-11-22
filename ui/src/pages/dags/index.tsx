@@ -62,7 +62,7 @@ function DAGs() {
   }, [mutate, cache]);
 
   React.useEffect(() => {
-    appBarContext.setTitle('DAGs');
+    appBarContext.setTitle('任务');
   }, [appBarContext]);
 
   const merged = React.useMemo(() => {
