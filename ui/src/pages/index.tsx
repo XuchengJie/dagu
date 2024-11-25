@@ -62,7 +62,7 @@ function Dashboard() {
               px: 2,
               display: 'flex',
               flexDirection: 'column',
-              height: 240,
+              height: 140,
             }}
           >
             <DashboardMetric
@@ -81,7 +81,7 @@ function Dashboard() {
             height: '100%',
           }}
         >
-          <Title>{`Timeline in ${config.tz}`}</Title>
+          <Title>时间线</Title>
           <DashboardTimechart data={data?.DAGs || []} />
         </Box>
       </Grid>
