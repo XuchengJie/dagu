@@ -46,7 +46,7 @@ function DAGSpec({ data }: Props) {
           <React.Fragment>
             <Box>
               <Stack direction="row" justifyContent="space-between">
-                <SubTitle>Overview</SubTitle>
+                <SubTitle>概况</SubTitle>
                 <FlowchartSwitch
                   value={cookie['flowchart']}
                   onChange={onChangeFlowchart}
@@ -83,7 +83,7 @@ function DAGSpec({ data }: Props) {
             </Box>
             <Box sx={{ mt: 3 }}>
               <Box sx={{ mt: 2 }}>
-                <SubTitle>Steps</SubTitle>
+                <SubTitle>步骤</SubTitle>
                 <DAGStepTable steps={data.DAG.DAG.Steps}></DAGStepTable>
               </Box>
             </Box>
