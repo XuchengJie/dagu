@@ -62,16 +62,16 @@ function NodeStatusTable({ nodes, status, name, refresh, file = '' }: Props) {
         <Table size="small" sx={tableStyle}>
           <TableHead>
             <TableRow>
-              <TableCell style={styles[i++]}>No</TableCell>
-              <TableCell style={styles[i++]}>Step Name</TableCell>
-              <TableCell style={styles[i++]}>Description</TableCell>
-              <TableCell style={styles[i++]}>Command</TableCell>
-              <TableCell style={styles[i++]}>Args</TableCell>
-              <TableCell style={styles[i++]}>Started At</TableCell>
-              <TableCell style={styles[i++]}>Finished At</TableCell>
-              <TableCell style={styles[i++]}>Status</TableCell>
-              <TableCell style={styles[i++]}>Error</TableCell>
-              <TableCell style={styles[i++]}>Log</TableCell>
+              <TableCell style={styles[i++]}>序号</TableCell>
+              <TableCell style={styles[i++]}>步骤名称</TableCell>
+              <TableCell style={styles[i++]}>描述</TableCell>
+              <TableCell style={styles[i++]}>命令</TableCell>
+              <TableCell style={styles[i++]}>参数</TableCell>
+              <TableCell style={styles[i++]}>开始时间</TableCell>
+              <TableCell style={styles[i++]}>完成时间</TableCell>
+              <TableCell style={styles[i++]}>状态</TableCell>
+              <TableCell style={styles[i++]}>错误</TableCell>
+              <TableCell style={styles[i++]}>日志</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

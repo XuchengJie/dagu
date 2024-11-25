@@ -80,7 +80,7 @@ function DAGStatus({ DAG, name, refresh }: Props) {
     <React.Fragment>
       <Box>
         <Stack direction="row" justifyContent="space-between">
-          <SubTitle>Overview</SubTitle>
+          <SubTitle>概况</SubTitle>
           <FlowchartSwitch value={flowchart} onChange={onChangeFlowchart} />
         </Stack>
         <BorderedBox
@@ -105,13 +105,13 @@ function DAGStatus({ DAG, name, refresh }: Props) {
             <Tab
               value="0"
               icon={<FontAwesomeIcon icon={faShareNodes} />}
-              label="Graph"
+              label="图形"
               sx={{ minHeight: '40px', fontSize: '0.8rem' }}
             />
             <Tab
               value="1"
               icon={<FontAwesomeIcon icon={faChartGantt} />}
-              label="Timeline"
+              label="时间线"
               sx={{ minHeight: '40px', fontSize: '0.8rem' }}
             />
           </Tabs>
@@ -149,7 +149,7 @@ function DAGStatus({ DAG, name, refresh }: Props) {
               </Box>
 
               <Box sx={{ mt: 3 }}>
-                <SubTitle>Steps</SubTitle>
+                <SubTitle>步骤</SubTitle>
                 <Box sx={{ mt: 2 }}>
                   <NodeStatusTable
                     nodes={DAG.Status!.Nodes}
