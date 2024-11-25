@@ -48,7 +48,7 @@ function DAGHistoryTable({ GridData, Logs }: HistoryTableProps) {
       {(props) => (
         <React.Fragment>
           <Box>
-            <SubTitle>Execution History</SubTitle>
+            <SubTitle>执行历史</SubTitle>
             <HistoryTable
               logs={logs|| []}
               gridData={GridData|| []}
@@ -70,7 +70,7 @@ function DAGHistoryTable({ GridData, Logs }: HistoryTableProps) {
                 </Box>
               </Box>
               <Box sx={{ mt: 3 }}>
-                <SubTitle>Steps</SubTitle>
+                <SubTitle>步骤</SubTitle>
                 <Box sx={{ mt: 2 }}>
                   <NodeStatusTable
                     nodes={logs[idx].Status.Nodes}

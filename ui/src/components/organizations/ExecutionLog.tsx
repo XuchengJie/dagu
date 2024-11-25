@@ -24,17 +24,17 @@ function ExecutionLog({ log }: Props) {
   return (
     <Box>
       <Stack spacing={1} direction="column" sx={{ width: '100%' }}>
-        <LabeledItem label="Log File">{log.LogFile}</LabeledItem>
+        <LabeledItem label="日志文件">{log.LogFile}</LabeledItem>
         {log.Step ? (
           <React.Fragment>
-            <LabeledItem label="Step Name">{log.Step.Step.Name}</LabeledItem>
+            <LabeledItem label="步骤名称">{log.Step.Step.Name}</LabeledItem>
             <Stack spacing={2} direction="row" sx={{ alignItems: 'center' }}>
-              <LabeledItem label="Started At">{log.Step.StartedAt}</LabeledItem>
-              <LabeledItem label="Finished At">
+              <LabeledItem label="开始时间">{log.Step.StartedAt}</LabeledItem>
+              <LabeledItem label="完成时间">
                 {log.Step.FinishedAt}
               </LabeledItem>
             </Stack>
-            <LabeledItem label="Status">
+            <LabeledItem label="状态">
               <NodeStatusChip status={log.Step.Status}>
                 {log.Step.StatusText}
               </NodeStatusChip>
@@ -59,7 +59,7 @@ function ExecutionLog({ log }: Props) {
             fontFamily: 'Courier New, Courier, monospace',
           }}
         >
-          {log.Content || '<No log output>'}
+          {log.Content || '<没有日志输出>'}
         </pre>
       </BorderedBox>
     </Box>

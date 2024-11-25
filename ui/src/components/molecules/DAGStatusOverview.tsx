@@ -22,10 +22,8 @@ function DAGStatusOverview({ status, name, file = '' }: Props) {
         <StatusChip status={status.Status}>{status.StatusText}</StatusChip>
       </LabeledItem>
       <LabeledItem label="请求ID">{status.RequestId}</LabeledItem>
-      <Stack direction="row" sx={{ alignItems: 'center' }} spacing={2}>
-        <LabeledItem label="开始时间">{status.StartedAt}</LabeledItem>
-        <LabeledItem label="完成时间">{status.FinishedAt}</LabeledItem>
-      </Stack>
+      <LabeledItem label="开始时间">{status.StartedAt}</LabeledItem>
+      <LabeledItem label="完成时间">{status.FinishedAt}</LabeledItem>
       <LabeledItem label="参数">{status.Params}</LabeledItem>
       <LabeledItem label="计划任务日志">
         <Link to={url}>{status.Log}</Link>
