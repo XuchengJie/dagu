@@ -97,7 +97,7 @@ function DAGSpec({ data }: Props) {
             ) : null}
 
             <Box sx={{ mt: 3 }}>
-              <SubTitle>Spec</SubTitle>
+              <SubTitle>详细</SubTitle>
               <BorderedBox
                 sx={{
                   mt: 2,
@@ -153,7 +153,7 @@ function DAGSpec({ data }: Props) {
                           }
                         }}
                       >
-                        Save
+                        保存
                       </Button>
                       <Button
                         color="error"
@@ -166,7 +166,7 @@ function DAGSpec({ data }: Props) {
                           </span>
                         }
                       >
-                        Cancel
+                        取消
                       </Button>
                     </Stack>
                   ) : (
@@ -182,7 +182,7 @@ function DAGSpec({ data }: Props) {
                           </span>
                         }
                       >
-                        Edit
+                        编辑
                       </Button>
                     </Stack>
                   )}

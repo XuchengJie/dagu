@@ -17,8 +17,8 @@ function DAGAttributes({ dag: config }: Props) {
   ));
   return (
     <Stack direction="column" spacing={1}>
-      <LabeledItem label="Name">{config.Name}</LabeledItem>
-      <LabeledItem label="Schedule">
+      <LabeledItem label="名称">{config.Name}</LabeledItem>
+      <LabeledItem label="计划">
         <Stack direction={'row'}>
           {config.Schedule?.map((s) => (
             <Chip
@@ -33,12 +33,12 @@ function DAGAttributes({ dag: config }: Props) {
           ))}
         </Stack>
       </LabeledItem>
-      <LabeledItem label="Description">{config.Description}</LabeledItem>
-      <LabeledItem label="Max Active Runs">{config.MaxActiveRuns}</LabeledItem>
-      <LabeledItem label="Params">{config.Params?.join(' ')}</LabeledItem>
+      <LabeledItem label="描述">{config.Description}</LabeledItem>
+      <LabeledItem label="最大并行数">{config.MaxActiveRuns}</LabeledItem>
+      <LabeledItem label="参数">{config.Params?.join(' ')}</LabeledItem>
       <Stack direction={'column'}>
         <React.Fragment>
-          <LabeledItem label="Preconditions">{null}</LabeledItem>
+          <LabeledItem label="前提条件">{null}</LabeledItem>
           <Box sx={{ pl: 2 }}>
             <ul>{preconditions}</ul>
           </Box>

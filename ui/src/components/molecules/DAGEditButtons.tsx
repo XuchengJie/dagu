@@ -37,7 +37,7 @@ function DAGEditButtons({ name }: Props) {
           }
         }}
       >
-        Rename
+        重命名
       </Button>
       <Button
         onClick={async () => {
@@ -59,7 +59,7 @@ function DAGEditButtons({ name }: Props) {
           }
         }}
       >
-        Delete
+        删除
       </Button>
     </Stack>
   );

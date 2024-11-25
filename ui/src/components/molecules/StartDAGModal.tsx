@@ -63,7 +63,7 @@ function StartDAGModal({ visible, dag, dismissModal, onSubmit }: Props) {
     <Modal open={visible} onClose={dismissModal}>
       <Box sx={style}>
         <Stack direction="row" alignContent="center" justifyContent="center">
-          <Typography variant="h6">Start the DAG</Typography>
+          <Typography variant="h6">开始任务</Typography>
         </Stack>
         <Stack
           direction="column"
@@ -145,7 +145,7 @@ function StartDAGModal({ visible, dag, dismissModal, onSubmit }: Props) {
               onSubmit(stringifyParams(params));
             }}
           >
-            Start
+            开始
           </Button>
           <Button variant="outlined" color="error" onClick={dismissModal}>
             Cancel

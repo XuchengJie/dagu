@@ -99,7 +99,7 @@ function DAGDetails() {
         >
           <Tabs value={`${pathname}`}>
             <LinkTab label="状态" value={`${baseUrl}`} />
-            <LinkTab label="Spec" value={`${baseUrl}/spec`} />
+            <LinkTab label="详细" value={`${baseUrl}/spec`} />
             <LinkTab label="历史" value={`${baseUrl}/history`} />
             {pathname == `${baseUrl}/log` ||
             pathname == `${baseUrl}/scheduler-log` ? (

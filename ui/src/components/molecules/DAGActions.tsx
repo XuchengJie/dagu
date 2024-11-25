@@ -89,7 +89,7 @@ function DAGActions({
         label={label}
         icon={
           <>
-            <Label show={false}>Start</Label>
+            <Label show={false}>开始</Label>
             <span className="icon">
               <FontAwesomeIcon icon={faPlay} />
             </span>
@@ -98,13 +98,13 @@ function DAGActions({
         disabled={!buttonState['start']}
         onClick={() => setIsStartModal(true)}
       >
-        {label && 'Start'}
+        {label && '开始'}
       </ActionButton>
       <ActionButton
         label={label}
         icon={
           <>
-            <Label show={false}>Stop</Label>
+            <Label show={false}>停止</Label>
             <span className="icon">
               <FontAwesomeIcon icon={faStop} />
             </span>
@@ -113,13 +113,13 @@ function DAGActions({
         disabled={!buttonState['stop']}
         onClick={() => setIsStopModal(true)}
       >
-        {label && 'Stop'}
+        {label && '停止'}
       </ActionButton>
       <ActionButton
         label={label}
         icon={
           <>
-            <Label show={false}>Retry</Label>
+            <Label show={false}>重试</Label>
             <span className="icon">
               <FontAwesomeIcon icon={faReply} />
             </span>
@@ -128,11 +128,11 @@ function DAGActions({
         disabled={!buttonState['retry']}
         onClick={() => setIsRetryModal(true)}
       >
-        {label && 'Retry'}
+        {label && '重试'}
       </ActionButton>
       <ConfirmModal
         title="Confirmation"
-        buttonText="Stop"
+        buttonText="停止"
         visible={isStopModal}
         dismissModal={() => setIsStopModal(false)}
         onSubmit={() => {
@@ -144,7 +144,7 @@ function DAGActions({
       </ConfirmModal>
       <ConfirmModal
         title="Confirmation"
-        buttonText="Rerun"
+        buttonText="返回"
         visible={isRetryModal}
         dismissModal={() => setIsRetryModal(false)}
         onSubmit={() => {
@@ -158,7 +158,7 @@ function DAGActions({
       >
         <Stack direction="column">
           <Box>Do you really want to rerun the last execution?</Box>
-          <LabeledItem label="Request-ID">{null}</LabeledItem>
+          <LabeledItem label="请求ID">{null}</LabeledItem>
           <Box>{status?.RequestId}</Box>
         </Stack>
       </ConfirmModal>
