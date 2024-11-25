@@ -10,16 +10,16 @@ function CreateDAGButton() {
         width: '100px',
       }}
       onClick={async () => {
-        const name = window.prompt('Please input the new DAG name', '');
+        const name = window.prompt('请输入新的任务名称', '');
         if (name === null) {
           return;
         }
         if (name === '') {
-          alert('File name cannot be empty');
+          alert('文件名称不能为空');
           return;
         }
         if (name.indexOf(' ') != -1) {
-          alert('File name cannot contain space');
+          alert('文件名称不能包含空格');
           return;
         }
         const resp = await fetch(`${getConfig().apiURL}/dags`, {

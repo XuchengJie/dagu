@@ -156,7 +156,7 @@ const defaultColumns = [
   }),
   columnHelper.accessor('Type', {
     id: 'Tags',
-    header: 'Tags',
+    header: '标签',
     cell: (props) => {
       const data = props.row.original!;
       if (data.Type == DAGDataType.DAG) {
@@ -195,7 +195,7 @@ const defaultColumns = [
   }),
   columnHelper.accessor('Type', {
     id: 'Status',
-    header: 'Status',
+    header: '状态',
     cell: (props) => {
       const data = props.row.original!;
       if (data.Type == DAGDataType.DAG) {
@@ -215,7 +215,7 @@ const defaultColumns = [
   }),
   columnHelper.accessor('Type', {
     id: 'Started At',
-    header: 'Started At',
+    header: '开始时间',
     cell: (props) => {
       const data = props.row.original!;
       if (data.Type == DAGDataType.DAG) {
@@ -233,7 +233,7 @@ const defaultColumns = [
   }),
   columnHelper.accessor('Type', {
     id: 'Finished At',
-    header: 'Finished At',
+    header: '完成时间',
     cell: (props) => {
       const data = props.row.original!;
       if (data.Type == DAGDataType.DAG) {
@@ -290,7 +290,7 @@ const defaultColumns = [
   }),
   columnHelper.accessor('Type', {
     id: 'NextRun',
-    header: 'Next Run',
+    header: '下次运行',
     enableSorting: true,
     cell: (props) => {
       const data = props.row.original!;
@@ -336,7 +336,7 @@ const defaultColumns = [
   }),
   columnHelper.accessor('Type', {
     id: 'Config',
-    header: 'Description',
+    header: '描述',
     enableSorting: false,
     cell: (props) => {
       const data = props.row.original!;
@@ -367,7 +367,7 @@ const defaultColumns = [
   }),
   columnHelper.display({
     id: 'Actions',
-    header: 'Actions',
+    header: '操作',
     cell: (props) => {
       const data = props.row.original!;
       if (data.Type == DAGDataType.Group) {
@@ -488,7 +488,7 @@ function DAGTable({
         }}
       >
         <TextField
-          label="Search Text"
+          label="搜索关键词"
           size="small"
           variant="filled"
           InputProps={{
@@ -523,7 +523,7 @@ function DAGTable({
             handleSearchTagChange(v);
           }}
           renderInput={(params) => (
-            <TextField {...params} variant="filled" label="Search Tag" />
+            <TextField {...params} variant="filled" label="搜索标签" />
           )}
           sx={{ width: '300px', ml: 2 }}
         />

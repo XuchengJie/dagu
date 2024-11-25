@@ -61,7 +61,7 @@ const DAGPagination = ({
     >
       <TextField
         size="small"
-        label="Items per page"
+        label="每页数量"
         value={inputValue}
         onChange={handleLimitChange}
         onBlur={commitChange}
