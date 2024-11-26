@@ -28,12 +28,10 @@ function ExecutionLog({ log }: Props) {
         {log.Step ? (
           <React.Fragment>
             <LabeledItem label="步骤名称">{log.Step.Step.Name}</LabeledItem>
-            <Stack spacing={2} direction="row" sx={{ alignItems: 'center' }}>
-              <LabeledItem label="开始时间">{log.Step.StartedAt}</LabeledItem>
-              <LabeledItem label="完成时间">
-                {log.Step.FinishedAt}
-              </LabeledItem>
-            </Stack>
+            <LabeledItem label="开始时间">{log.Step.StartedAt}</LabeledItem>
+            <LabeledItem label="完成时间">
+              {log.Step.FinishedAt}
+            </LabeledItem>
             <LabeledItem label="状态">
               <NodeStatusChip status={log.Step.Status}>
                 {log.Step.StatusText}

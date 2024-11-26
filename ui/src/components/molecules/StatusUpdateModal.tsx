@@ -41,7 +41,7 @@ function StatusUpdateModal({ visible, dismissModal, step, onSubmit }: Props) {
     <Modal open={visible} onClose={dismissModal}>
       <Box sx={style}>
         <Stack direction="row" alignContent="center" justifyContent="center">
-          <Typography variant="h6">Update status of "{step.Name}"</Typography>
+          <Typography variant="h6">更新任务"{step.Name}"状态</Typography>
         </Stack>
         <Stack
           direction="column"

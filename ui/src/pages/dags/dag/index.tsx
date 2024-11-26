@@ -103,7 +103,7 @@ function DAGDetails() {
             <LinkTab label="历史" value={`${baseUrl}/history`} />
             {pathname == `${baseUrl}/log` ||
             pathname == `${baseUrl}/scheduler-log` ? (
-              <Tab label="Log" value={pathname} />
+              <Tab label="日志" value={pathname} />
             ) : null}
           </Tabs>
           {pathname == `${baseUrl}/spec` ? (

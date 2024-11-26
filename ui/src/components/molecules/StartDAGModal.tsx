@@ -148,7 +148,7 @@ function StartDAGModal({ visible, dag, dismissModal, onSubmit }: Props) {
             开始
           </Button>
           <Button variant="outlined" color="error" onClick={dismissModal}>
-            Cancel
+            取消
           </Button>
         </Stack>
       </Box>

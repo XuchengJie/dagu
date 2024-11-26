@@ -134,7 +134,7 @@ function DAGs() {
           justifyContent: 'space-between',
         }}
       >
-        <Title>DAGs</Title>
+        <Title>任务列表</Title>
         <CreateDAGButton />
       </Box>
       <Box>
