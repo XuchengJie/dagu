@@ -39,7 +39,7 @@ function CreateDAGButton() {
         }
       }}
     >
-      New
+      新建
     </Button>
   );
 }

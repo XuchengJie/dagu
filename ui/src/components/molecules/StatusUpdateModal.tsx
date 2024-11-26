@@ -60,18 +60,18 @@ function StatusUpdateModal({ visible, dismissModal, step, onSubmit }: Props) {
               variant="outlined"
               onClick={() => onSubmit(step, 'mark-success')}
             >
-              Mark Success
+              标记成功
             </Button>
             <Button
               variant="outlined"
               onClick={() => onSubmit(step, 'mark-failed')}
             >
-              Mark Failed
+              标记失败
             </Button>
           </Stack>
           <Stack direction="row" alignContent="center" justifyContent="center">
             <Button variant="outlined" color="error" onClick={dismissModal}>
-              Cancel
+              取消
             </Button>
           </Stack>
         </Stack>

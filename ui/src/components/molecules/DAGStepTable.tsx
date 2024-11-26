@@ -29,13 +29,13 @@ function DAGStepTable({ steps }: Props) {
       <Table size="small" sx={tableStyle}>
         <TableHead>
           <TableRow>
-            <TableCell style={styles[i++]}>Name</TableCell>
-            <TableCell style={styles[i++]}>Description</TableCell>
-            <TableCell style={styles[i++]}>Command</TableCell>
-            <TableCell style={styles[i++]}>Args</TableCell>
-            <TableCell style={styles[i++]}>Dir</TableCell>
-            <TableCell style={styles[i++]}>Repeat</TableCell>
-            <TableCell style={styles[i++]}>Preconditions</TableCell>
+            <TableCell style={styles[i++]}>名称</TableCell>
+            <TableCell style={styles[i++]}>描述</TableCell>
+            <TableCell style={styles[i++]}>命令</TableCell>
+            <TableCell style={styles[i++]}>参数</TableCell>
+            <TableCell style={styles[i++]}>目录</TableCell>
+            <TableCell style={styles[i++]}>重复</TableCell>
+            <TableCell style={styles[i++]}>前置条件</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

@@ -86,12 +86,12 @@ const defaultColumns = [
         >
           {table.getIsAllRowsExpanded() ? (
             <>
-              <VisuallyHidden>Compress rows</VisuallyHidden>
+              <VisuallyHidden>折叠行</VisuallyHidden>
               <KeyboardArrowUp />
             </>
           ) : (
             <>
-              <VisuallyHidden>Expand rows</VisuallyHidden>
+              <VisuallyHidden>展开行</VisuallyHidden>
               <KeyboardArrowDown />
             </>
           )}
@@ -251,7 +251,7 @@ const defaultColumns = [
   }),
   columnHelper.accessor('Type', {
     id: 'Schedule',
-    header: `Schedule in ${getConfig().tz || moment.tz.guess()}`,
+    header: `任务计划`,
     enableSorting: true,
     cell: (props) => {
       const data = props.row.original!;
@@ -348,7 +348,7 @@ const defaultColumns = [
   }),
   columnHelper.accessor('Type', {
     id: 'Live',
-    header: 'Live',
+    header: '存活',
     cell: (props) => {
       const data = props.row.original!;
       if (data.Type != DAGDataType.DAG) {
