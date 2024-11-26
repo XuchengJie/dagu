@@ -10,7 +10,7 @@ function DAGEditButtons({ name }: Props) {
     <Stack direction="row" spacing={1}>
       <Button
         onClick={async () => {
-          const val = window.prompt('Please input the new DAG name', '');
+          const val = window.prompt('请输入新的任务名称', '');
           if (!val) {
             return;
           }
@@ -41,7 +41,7 @@ function DAGEditButtons({ name }: Props) {
       </Button>
       <Button
         onClick={async () => {
-          if (!confirm('Are you sure to delete the DAG?')) {
+          if (!confirm('确定删除此任务?')) {
             return;
           }
           const url = `${getConfig().apiURL}/dags/${name}`;

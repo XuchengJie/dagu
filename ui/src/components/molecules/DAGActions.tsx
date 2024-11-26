@@ -67,7 +67,7 @@ function DAGActions({
       }
       if (!ret.ok) {
         const e = await ret.text();
-        alert(e || 'Failed to submit');
+        alert(e || '提交失败');
       }
       refresh && refresh();
     },
@@ -131,7 +131,7 @@ function DAGActions({
         {label && '重试'}
       </ActionButton>
       <ConfirmModal
-        title="Confirmation"
+        title="确认"
         buttonText="停止"
         visible={isStopModal}
         dismissModal={() => setIsStopModal(false)}
@@ -143,7 +143,7 @@ function DAGActions({
         <Box>Do you really want to cancel the DAG?</Box>
       </ConfirmModal>
       <ConfirmModal
-        title="Confirmation"
+        title="确认"
         buttonText="返回"
         visible={isRetryModal}
         dismissModal={() => setIsRetryModal(false)}
@@ -157,7 +157,7 @@ function DAGActions({
         }}
       >
         <Stack direction="column">
-          <Box>Do you really want to rerun the last execution?</Box>
+          <Box>您真的要重新运行上次执行吗？</Box>
           <LabeledItem label="请求ID">{null}</LabeledItem>
           <Box>{status?.RequestId}</Box>
         </Stack>
