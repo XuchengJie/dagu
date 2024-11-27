@@ -112,6 +112,7 @@ const defaultColumns = [
   }),
   columnHelper.accessor('Name', {
     id: 'Name',
+    header: '名称',
     cell: ({ row, getValue }) => {
       const data = row.original!;
       if (data.Type == DAGDataType.Group) {

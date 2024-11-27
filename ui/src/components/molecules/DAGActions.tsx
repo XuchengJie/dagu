@@ -140,11 +140,11 @@ function DAGActions({
           onSubmit({ name: name, action: 'stop' });
         }}
       >
-        <Box>Do you really want to cancel the DAG?</Box>
+        <Box>您真的要取消任务吗？</Box>
       </ConfirmModal>
       <ConfirmModal
         title="确认"
-        buttonText="返回"
+        buttonText="重试"
         visible={isRetryModal}
         dismissModal={() => setIsRetryModal(false)}
         onSubmit={() => {
@@ -157,7 +157,7 @@ function DAGActions({
         }}
       >
         <Stack direction="column">
-          <Box>您真的要重新运行上次执行吗？</Box>
+          <Box>您真的要重新执行任务吗？</Box>
           <LabeledItem label="请求ID">{null}</LabeledItem>
           <Box>{status?.RequestId}</Box>
         </Stack>
