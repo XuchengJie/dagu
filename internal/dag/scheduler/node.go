@@ -88,19 +88,19 @@ const (
 func (s NodeStatus) String() string {
 	switch s {
 	case NodeStatusRunning:
-		return "running"
+		return "运行中"
 	case NodeStatusError:
-		return "failed"
+		return "失败"
 	case NodeStatusCancel:
-		return "canceled"
+		return "已取消"
 	case NodeStatusSuccess:
-		return "finished"
+		return "已完成"
 	case NodeStatusSkipped:
-		return "skipped"
+		return "已跳过"
 	case NodeStatusNone:
 		fallthrough
 	default:
-		return "not started"
+		return "未开始"
 	}
 }
 

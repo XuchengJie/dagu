@@ -61,7 +61,7 @@ function ConfirmModal({
             {buttonText}
           </Button>
           <Button variant="outlined" color="error" onClick={dismissModal}>
-            Cancel
+            取消
           </Button>
         </Stack>
       </Box>

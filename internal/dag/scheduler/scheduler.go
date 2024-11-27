@@ -39,17 +39,17 @@ const (
 func (s Status) String() string {
 	switch s {
 	case StatusRunning:
-		return "running"
+		return "运行中"
 	case StatusError:
-		return "failed"
+		return "失败"
 	case StatusCancel:
-		return "canceled"
+		return "已取消"
 	case StatusSuccess:
-		return "finished"
+		return "已完成"
 	case StatusNone:
 		fallthrough
 	default:
-		return "not started"
+		return "未开始"
 	}
 }
 
