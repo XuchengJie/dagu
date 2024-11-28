@@ -13,7 +13,8 @@ type Props = {
 };
 
 function formatTime(time: any) {
-  return moment(time).format('YYYY-MM-DD HH:mm:ss')
+  let d = moment(time).format('YYYY-MM-DD HH:mm:ss')
+  return d.isValid() ? d : '';
 }
 
 function DAGStatusOverview({ status, name, file = '' }: Props) {

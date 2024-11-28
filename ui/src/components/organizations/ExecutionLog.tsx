@@ -5,6 +5,7 @@ import BorderedBox from '../atoms/BorderedBox';
 import LabeledItem from '../atoms/LabeledItem';
 import LoadingIndicator from '../atoms/LoadingIndicator';
 import NodeStatusChip from '../molecules/NodeStatusChip';
+import moment from 'moment';
 
 type Props = {
   log?: LogFile;
@@ -15,6 +16,11 @@ const ANSI_CODES_REGEX = [
   '[\\u001B\\u009B][[\\]()#;?]*(?:(?:(?:(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]+)*|[a-zA-Z\\d]+(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]*)*)?\\u0007)',
   '(?:(?:\\d{1,4}(?:;\\d{0,4})*)?[\\dA-PR-TZcf-nq-uy=><~]))',
 ].join('|');
+
+function formatTime(time: any) {
+  let d = moment(time).format('YYYY-MM-DD HH:mm:ss')
+  return d.isValid() ? d : '';
+}
 
 function ExecutionLog({ log }: Props) {
   if (!log) {
@@ -28,9 +34,9 @@ function ExecutionLog({ log }: Props) {
         {log.Step ? (
           <React.Fragment>
             <LabeledItem label="步骤名称">{log.Step.Step.Name}</LabeledItem>
-            <LabeledItem label="开始时间">{log.Step.StartedAt}</LabeledItem>
+            <LabeledItem label="开始时间">{formatTime(log.Step.StartedAt)}</LabeledItem>
             <LabeledItem label="完成时间">
-              {log.Step.FinishedAt}
+              {formatTime(log.Step.FinishedAt)}
             </LabeledItem>
             <LabeledItem label="状态">
               <NodeStatusChip status={log.Step.Status}>

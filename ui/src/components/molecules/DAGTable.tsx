@@ -59,6 +59,11 @@ type Props = {
   handleSearchTagChange: (tag: string) => void;
 };
 
+function formatTime(time: any) {
+  let d = moment(time).format('YYYY-MM-DD HH:mm:ss')
+  return d.isValid() ? d : '';
+}
+
 type DAGRow = DAGItem & { subRows?: DAGItem[] };
 
 const durFormatSec = 'd[d]h[h]m[m]s[s]';
@@ -220,7 +225,7 @@ const defaultColumns = [
     cell: (props) => {
       const data = props.row.original!;
       if (data.Type == DAGDataType.DAG) {
-        return data.DAGStatus.Status?.StartedAt;
+        return formatTime(data.DAGStatus.Status?.StartedAt);
       }
       return null;
     },
@@ -238,7 +243,7 @@ const defaultColumns = [
     cell: (props) => {
       const data = props.row.original!;
       if (data.Type == DAGDataType.DAG) {
-        return data.DAGStatus.Status?.FinishedAt;
+        return formatTime(data.DAGStatus.Status?.FinishedAt);
       }
       return null;
     },

@@ -60,7 +60,7 @@ function DAGHistoryTable({ GridData, Logs }: HistoryTableProps) {
           {logs && logs[idx] ? (
             <React.Fragment>
               <Box sx={{ mt: 3 }}>
-                <SubTitle>Status</SubTitle>
+                <SubTitle>状态</SubTitle>
                 <Box sx={{ mt: 2 }}>
                   <DAGStatusOverview
                     status={logs[idx].Status}
