@@ -6,6 +6,7 @@ import { TableCell } from '@mui/material';
 import StyledTableRow from '../atoms/StyledTableRow';
 import { OpenInNew } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 type Props = {
   rownum: number;
@@ -14,6 +15,11 @@ type Props = {
   name: string;
   onRequireModal: (step: Step) => void;
 };
+
+function formatTime(time: any) {
+  let d = moment(time)
+  return d.isValid() ? d.format('YYYY-MM-DD HH:mm:ss') : '';
+}
 
 function NodeStatusTableRow({
   name,
@@ -44,8 +50,8 @@ function NodeStatusTableRow({
       </TableCell>
       <TableCell> {node.Step.Command} </TableCell>
       <TableCell> {args} </TableCell>
-      <TableCell> {node.StartedAt} </TableCell>
-      <TableCell> {node.FinishedAt} </TableCell>
+      <TableCell> {formatTime(node.StartedAt)} </TableCell>
+      <TableCell> {formatTime(node.FinishedAt)} </TableCell>
       <TableCell>
         <button style={buttonStyle} onClick={() => onRequireModal(node.Step)}>
           <NodeStatusChip status={node.Status}>
